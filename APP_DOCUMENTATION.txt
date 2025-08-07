@@ -1,0 +1,99 @@
+# Blogging Website Documentation
+
+## Overview
+This is a modern blogging website built with Next.js, TypeScript, and Tailwind CSS. It features a clean, minimal UI, dynamic blog posts, and a responsive design. The app is organized for scalability and maintainability.
+
+---
+
+## Project Structure
+
+- `app/` - Main Next.js app directory
+  - `globals.css` - Global styles and custom markdown styling
+  - `layout.tsx` - Root layout, applies global structure and footer
+  - `page.tsx` - Home page, lists all blog posts
+  - `blog/[id]/page.tsx` - Dynamic blog post page
+- `components/` - Reusable UI components
+  - `BlogList.tsx` - Renders a list of blog posts
+  - `Footer.tsx` - Persistent footer with author info and social links
+  - `ui/` - Shared UI elements (buttons, inputs, sidebar, etc.)
+- `content/posts/` - Markdown files for each blog post
+- `data/` - JSON data files (posts, todos)
+- `lib/` - Utility functions
+  - `posts.ts` - Blog post fetching and parsing logic
+  - `utils.ts` - General utilities
+- `public/` - Static assets (SVGs, images)
+- Config files: `package.json`, `tailwind.config.ts`, `tsconfig.json`, etc.
+
+---
+
+## Key Features
+
+- **Dynamic Routing**: Uses Next.js dynamic routes for blog posts (`blog/[id]`).
+- **Markdown Rendering**: Blog content is written in markdown and rendered as HTML.
+- **Custom Markdown Styling**: All markdown elements (headings, lists, code, tables, etc.) are styled for readability and aesthetics via `.markdown-content` in `globals.css`.
+- **Reusable Components**: Footer, BlogList, and UI elements are modular and reusable.
+- **Responsive Design**: Layout adapts to all screen sizes.
+- **Author Info & Social Links**: Footer displays author details and social media icons.
+- **Syntax Highlighting**: Code blocks in posts are styled for clarity.
+
+---
+
+## How It Works
+
+1. **Home Page (`app/page.tsx`)**
+   - Fetches all posts using `getAllPosts()` from `lib/posts.ts`.
+   - Renders a list of blog post previews via `BlogList`.
+
+2. **Blog Post Page (`app/blog/[id]/page.tsx`)**
+   - Fetches a single post by ID using `getPostById()`.
+   - Renders the post content with custom markdown styling.
+   - Handles not-found cases gracefully.
+
+3. **Footer (`components/Footer.tsx`)**
+   - Always visible at the bottom of the app.
+   - Shows author name, bio, and social/contact links with icons.
+
+4. **Styling (`app/globals.css`)**
+   - Uses Tailwind CSS for utility classes.
+   - Customizes markdown rendering for all elements.
+   - Ensures consistent font, color, spacing, and responsive design.
+
+---
+
+## Adding a New Blog Post
+
+1. Create a new markdown file in `content/posts/` (e.g., `my-new-post.md`).
+2. Add frontmatter (title, date, etc.) and content.
+3. The post will automatically appear on the home page and be accessible via its ID.
+
+---
+
+## Customization
+
+- **Colors & Fonts**: Adjust in `tailwind.config.ts` and `globals.css`.
+- **UI Components**: Extend or modify components in `components/` and `components/ui/`.
+- **Markdown Styling**: Tweak `.markdown-content` rules in `globals.css` for custom look.
+
+---
+
+## Dependencies
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React (icons)
+- Highlight.js (code syntax)
+
+---
+
+## Author & Contact
+- Mahir Mahtab
+- Email: mahir.mahtab@example.com
+- GitHub: https://github.com/mahirmahtab
+- Twitter: https://twitter.com/mahirmahtab
+- LinkedIn: https://linkedin.com/in/mahirmahtab
+
+---
+
+## License
+This project is open source. Feel free to use, modify, and share!

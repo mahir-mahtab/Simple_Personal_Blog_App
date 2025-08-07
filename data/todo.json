@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "task": "Add the Gourmand font",
+    "details": "Import via Google Fonts in app/layout.tsx and update tailwind.config.ts"
+  },
+  {
+    "id": 2,
+    "task": "Set global styles",
+    "details": "In app/globals.css, set font-family to 'Gourmand' and simplify default styles"
+  },
+  {
+    "id": 3,
+    "task": "Center and constrain the main container",
+    "details": "Wrap content in a div with flex centering and max-w-[50vw] for half-width layout"
+  },
+  {
+    "id": 4,
+    "task": "Create a minimal BlogList component",
+    "details": "components/BlogList.tsx should render post titles from data/post.json with simple hover styles"
+  },
+  {
+    "id": 5,
+    "task": "Update the home page (app/page.tsx)",
+    "details": "Render a centered title 'My Blog' and include the new BlogList inside the constrained container"
+  },
+  {
+    "id": 6,
+    "task": "Verify responsiveness",
+    "details": "Ensure layout adapts on smaller screens and retains half-width centering on desktop"
+  },
+  {
+    "id": 7,
+    "task": "Cleanup and polish",
+    "details": "Remove unused styles/components and run lint to fix warnings"
+  }
+]
