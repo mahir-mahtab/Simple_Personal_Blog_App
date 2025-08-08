@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Cormorant_Garamond } from "next/font/google";
 import Footer from "@/components/Footer";
+import { ParticleEffect } from "@/components/ParticleEffect";
+import Navbar from "@/components/Navbar";
 const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={cormorantGaramond.className}>
       <body className="antialiased">
+        <ParticleEffect />
         <div className="min-h-screen bg-white">
+          <Navbar />
           <div className="w-full max-w-2xl mx-auto px-8 py-12">
             {children}
           </div>

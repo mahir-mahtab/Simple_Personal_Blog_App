@@ -1,4 +1,3 @@
-
 import { getPostById } from '@/lib/posts';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -8,11 +7,22 @@ export default async function Post({ params }: { params: { id: string } }) {
   const { id } = await params;
   const post = await getPostById(id);
 
+  // Format date to a readable format
+  let formattedDate = '';
+  if (post?.date) {
+    const dateObj = new Date(post.date);
+    formattedDate = dateObj.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  }
+
   if (!post) {
     return (
       <div className="text-center">
         <h1 className="text-4xl font-light text-gray-900 mb-4">Post not found</h1>
-        <p className="text-gray-600">The post you're looking for doesn't exist.</p>
+        <p className="text-gray-600">{"The post you're looking for doesn't exist."}</p>
       </div>
     );
   }
@@ -29,8 +39,8 @@ export default async function Post({ params }: { params: { id: string } }) {
       </Link>
       
       <header className="mb-8 text-center">
-        <h1 className="text-5xl font-light text-gray-900 mb-4">{post.title}</h1>
-        <p className="text-gray-600">{post.date}</p>
+        <h1 className="text-4xl text-gray-900 mb-4">{post.title}</h1>
+        <p className="text-gray-600">{formattedDate}</p>
       </header>
       
       <div 

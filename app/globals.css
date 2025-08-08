@@ -168,19 +168,19 @@
 }
 
 .markdown-content h1 {
-  @apply text-4xl font-light text-gray-900 tracking-tight mb-6 mt-12;
+  @apply text-3xl font-light text-gray-900 tracking-tight mb-6 mt-12;
 }
 
 .markdown-content h2 {
-  @apply text-3xl font-light text-gray-900 mb-4 mt-10 pb-2 border-b border-gray-200;
+  @apply text-2xl font-light text-gray-900 mb-4 mt-10 pb-2 border-b border-gray-200;
 }
 
 .markdown-content h3 {
-  @apply text-2xl font-light text-gray-900 mb-3 mt-8;
+  @apply text-xl font-light text-gray-900 mb-3 mt-8;
 }
 
 .markdown-content h4 {
-  @apply text-xl font-light text-gray-900 mb-2 mt-6;
+  @apply text-lg font-light text-gray-900 mb-2 mt-6;
 }
 
 .markdown-content p {

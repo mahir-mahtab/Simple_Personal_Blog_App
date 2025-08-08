@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="text-center space-y-6">
           <div className="text-2xl font-light tracking-tight text-gray-900">Mahir Mahtab</div>
           <p className="text-gray-600 text-lg max-w-lg mx-auto leading-relaxed font-light"> 
-            When not coding, you'll find me exploring new technologies or contributing to open source.
+            {"When not coding, you'll find me exploring new technologies or contributing to open source."}
           </p>
           <div className="flex justify-center gap-6 text-gray-600">
             <a 
