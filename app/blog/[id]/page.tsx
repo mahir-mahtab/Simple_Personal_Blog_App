@@ -2,7 +2,7 @@ import { getPostById } from '@/lib/posts';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-export default async function Post({ params }: { params: { id: string } }) {
+export default async function Post({ params }: { params: Promise<{ id: string }> }) {
   // Next.js 15 dynamic params must be awaited
   const { id } = await params;
   const post = await getPostById(id);
