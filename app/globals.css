@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'highlight.js/styles/github.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -120,9 +119,88 @@
     @apply bg-white text-gray-900 font-sans antialiased;
   }
   
-  /* Custom code block styling */
+  /* Syntax highlighting for code blocks - GitHub-inspired theme */
   .hljs {
     @apply !bg-gray-50 !p-4 !rounded-lg !text-sm !leading-relaxed;
+    color: #24292e;
+  }
+  
+  .hljs-comment,
+  .hljs-quote {
+    color: #6a737d;
+    font-style: italic;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #d73a49;
+  }
+  
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #005cc5;
+  }
+  
+  .hljs-string,
+  .hljs-doctag {
+    color: #032f62;
+  }
+  
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #6f42c1;
+    font-weight: 600;
+  }
+  
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #005cc5;
+  }
+  
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #22863a;
+  }
+  
+  .hljs-regexp,
+  .hljs-link {
+    color: #032f62;
+  }
+  
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #e36209;
+  }
+  
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #005cc5;
+  }
+  
+  .hljs-meta {
+    color: #6a737d;
+  }
+  
+  .hljs-deletion {
+    background: #ffeef0;
+  }
+  
+  .hljs-addition {
+    background: #f0fff4;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .hljs-strong {
+    font-weight: 600;
   }
   
   /* Custom pre styling for better code blocks */
